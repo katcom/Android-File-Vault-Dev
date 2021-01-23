@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/button_area"
+        android:gravity="center">
+        <Button
+        android:id="@+id/button_encrypt"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:text="Pick and Encrypt"
+
+        android:background="@drawable/lack_blue_button"/>
+
+        <Button
+            android:id="@+id/button_decrypt"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:text="Decrypt File"
+            android:background="@drawable/lack_blue_button"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_area"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encrypted Files:"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decrypted Files:"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/decrypted_files_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
